@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora em JS</title>
+  <link rel="stylesheet" href="main-style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+  <div id="calc-layout">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <output id="output" class="mt-4"></output>
+        </div>
+      </div>
+      <div class="row mt-2 g-1 operations">
+        <div class="col-3" onclick="clean()">C</div>
+        <div class="col-3" onclick="remove()"><</div>
+        <div class="col-3" onclick="insert('/')">/</div>
+        <div class="col-3" onclick="insert('*')">x</div>
+      </div>
+
+      <div class="row mt-2 g-1 operations">
+        <div class="col-3" onclick="insert('7')">7</div>
+        <div class="col-3" onclick="insert('8')">8</div>
+        <div class="col-3" onclick="insert('9')">9</div>
+        <div class="col-3" onclick="insert('-')">-</div>
+      </div>
+
+      <div class="row mt-2 g-1 operations">
+        <div class="col-3" onclick="insert('4')">4</div>
+        <div class="col-3" onclick="insert('5')">5</div>
+        <div class="col-3" onclick="insert('6')">6</div>
+        <div class="col-3" onclick="insert('+')">+</div>
+      </div>
+
+      <div class="row mt-2 g-1 operations">
+        <div class="col-3" onclick="insert('1')">1</div>
+        <div class="col-3" onclick="insert('2')">2</div>
+        <div class="col-3" onclick="insert('3')">3</div>
+        <div class="col-3" onclick="insert('%')">%</div>
+      </div>
+
+      <div class="row mt-2 g-1 operations">
+        <div class="col-6" onclick="insert('0')">0</div>
+        <div class="col-3" onclick="insert('.')">.</div>
+        <div class="col-3" onclick="calculator()">=</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script src="calculator.js"></script>
+</body>
+</html>

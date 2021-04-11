@@ -1,0 +1,30 @@
+body {
+  background-color: burlywood;
+}
+
+#calc-layout {
+  margin: 20px auto;
+  background-color: rgb(54, 51, 51);
+  width: 300px;
+  height: 400px;
+}
+
+.operations div {
+  background-color: white;
+  text-align: center;
+  line-height: 29px;
+  border: 6px solid rgb(54, 51, 51);
+  height: 42px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.operations div:hover {background-color: rgb(83, 80, 80);}
+
+#output {
+  background-color: white;
+  height: 35px;
+  width: 100%;
+  font-size: 23px;
+  text-align: right;
+}

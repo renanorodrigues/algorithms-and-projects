@@ -34,3 +34,18 @@ function findMinNumber(arr){
 }
 
 console.log(findMinNumber([1, 5, 4, 9, 2, 0, 7, -1, 3]));
+
+// Question V - Multiply numbers in a array
+function multiply(arr){
+  if(arr.length === 1) return arr[0];
+  return arr[0] * multiply(arr.slice(1));
+}
+
+console.log(multiply([5, 5, 5]))
+
+// Question VI - Invert numbers
+function invertArray(arr){
+  return arr.length < 2 ? arr : [arr.pop()].concat(invertArray(arr));
+}
+
+console.log(invertArray([1, 2, 3, 4, 5, 6]))

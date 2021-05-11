@@ -13,7 +13,7 @@ def mergeArray(arrLeft, arrRight)
     arrayMerged.push(arrRight.shift)
   end 
   
-  return arrayMerged
+  arrayMerged
 end 
 
 def mergeSort(arr)
@@ -23,7 +23,7 @@ def mergeSort(arr)
   right_array = arr[middle, arr.length]
   left_ordered = mergeSort(left_array)
   right_ordered = mergeSort(right_array)
-  return mergeArray(left_ordered, right_ordered)
+  mergeArray(left_ordered, right_ordered)
 end
 
 arr = [7, 7 ,7 , 4 , 4 , 1 , 1 , 2 , 0, 0, 8, -1]

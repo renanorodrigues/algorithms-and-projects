@@ -19,7 +19,6 @@ function merge_sort(arr){
   const array_right = arr.slice(middle, arr.length);
   const left = merge_sort(array_left);
   const right = merge_sort(array_right);
-  debugger
   return _merge(left, right);
 }
 

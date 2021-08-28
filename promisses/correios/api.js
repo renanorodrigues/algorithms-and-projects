@@ -24,7 +24,7 @@ function requestApiCorreios(zipcode){
     .then(response => {
       if(!response.ok) return new Error('Requisition failed');
 
-      if(response.status == 404) return new Error('Zipcode not find');
+      if(response.status == 404) return new Error('Zipcode not found');
 
       return response.json();
     })

@@ -10,12 +10,11 @@ function validateZipcode(cep){
 
   if(regexCEP.test(zipcode)){
     spanError.style.visibility = "hidden";
-    ulAddress.textContent = '';
     requestApiCorreios(zipcode);
   }else{
-    spanError.innerText = "Invalid format of zipcode";
-    spanError.style.visibility = "visible";
+    renderErrorZipcode("Invalid format of zipcode")
   }
+  ulAddress.textContent = '';
 }
 
 function requestApiCorreios(zipcode){
@@ -30,11 +29,14 @@ function requestApiCorreios(zipcode){
       return response.json();
     })
     .then(data => {
-      fillInputsAddress(data);
+      if(data.erro) {
+        renderErrorZipcode("Zipcode not found")
+      } else {
+        fillInputsAddress(data);
+      }
     })
     .catch(function(error){
-      spanError.innerText = "Networking facing some problems: " + error.message;
-      spanError.style.visibility = "visible";
+      renderErrorZipcode("Error: " + error.message);
   })
 
   
@@ -49,4 +51,9 @@ function fillInputsAddress(addressValues){
     li.innerHTML = `${key}: ${addressValues[key]}`;
     ulAddress.appendChild(li);
   })
+}
+
+function renderErrorZipcode(msgError){
+  spanError.innerText = msgError;
+  spanError.style.visibility = "visible";
 }
